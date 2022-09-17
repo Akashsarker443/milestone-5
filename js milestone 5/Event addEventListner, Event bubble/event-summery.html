@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summery</title>
+</head>
+<body>
+    <h1>Final DOM event handlers</h1>
+    <h3 id="handler-status">default text</h3>
+    <button onclick="handleOnClick()">Handle event by add onclick function</button>
+    <button id="event-listener">Handle event by addEventListener</button>
+    
+
+
+     <script>
+        function handleOnClick(){
+            const handlerStatus =document.getElementById('handler-status');
+            handlerStatus.innerText ='This is handled by function attached on onclick attribute';
+            handlerStatus.style.color ='red';
+
+        }
+
+        // use of  option 4 final
+        document.getElementById('event-listener').addEventListener('click', function(){
+            const handlerStatus =document.getElementById('handler-status');
+            handlerStatus.innerText ='This text is updated by addevent listener button. I am very happy today to use this on my website';
+            handlerStatus.style.color ='purple';
+            handlerStatus.style.fontSize ='30px';
+            handlerStatus.style.border ='2px solid skyblue';
+            handlerStatus.style.padding ='10px';
+            handlerStatus.style.borderRadius  ='10px';
+        })
+     </script>
+
+</body>
+</html>

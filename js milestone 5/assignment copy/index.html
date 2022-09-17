@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="images/logo for fav-icon.png"
+      type="image/x-icon"
+    />
+    <title>Player Transferring</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+  </head>
+  <body>
+    <header>
+      
+    
+    </header>
+    <!-- main section starts here -->
+    <main class="bg--black">
+      <!-- row-1 start here -->
+
+      <div class="grid grid-cols-4 gap-4 w-10/12 mx-auto mb-4">
+        <div class="border" style="height: 330px">
+          <img class="mb-4 h-2/4 w-full" src="https://th.bing.com/th/id/R.8563b036bc7e2f4002091c40003e8087?rik=cERjR5EdbBTCDQ&pid=ImgRaw&r=0" alt="" />
+          <h2 class="text-red-400 text-2xl text-center font-semibold mb-2">
+            Lionel Messi
+          </h2>
+          <p class="text-slate-500 text-center mb-4">36 Goals . 120 Assist</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-20 text-1xl rounded" onclick="selectPlayer(this)"
+          >
+            SELECT
+          </button>
+        </div>
+
+        <div class="border" style="height: 330px">
+          <img
+            class="mb-4 h-2/4 w-full"
+            src="images/Kylian Mbappe (2).jpg"
+            alt=""
+          />
+          <h2 class="text-white text-2xl text-center font-semibold mb-2">
+            Kylian Mbappe
+          </h2>
+          <p class="text-slate-500 text-center mb-4">26 Goals . 112 Assist</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-20 text-1xl rounded" onclick="selectPlayer(this)"
+          >
+            SELECT
+          </button>
+        </div>
+
+        <div class="border" style="height: 330px">
+          <img class="mb-4 h-2/4 w-full" src="images//Neymar Jr.jpg" alt="" />
+          <h2 class="text-white text-2xl text-center font-semibold mb-2">
+            Neymar Jr
+          </h2>
+          <p class="text-slate-500 text-center mb-4">30 Goals . 145 Assist</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-20 text-1xl rounded" onclick="selectPlayer(this)"
+          >
+            SELECT
+          </button>
+        </div>
+
+        <div class="border" style="height: 330px">
+          <h1 class="text-white text-center text-2xl mt-3">Selected-V</h1>
+          <ul id="list-container" class="text-white list-decimal list-inside p-3">
+             
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- row-1 ends here -->
+
+
+
+      <!-- row-2 start here -->
+      <div class="grid grid-cols-4 gap-4 w-10/12 mx-auto mb-12">
+        <div class="border" style="height: 330px">
+          <img class="mb-4 h-2/4 w-full" src="images/Abdou Diallo.jpg" alt="" />
+          <h2 class="text-white text-2xl text-center font-semibold mb-2">
+            Abdou Diallo
+          </h2>
+          <p class="text-slate-500 text-center mb-4">7 Goals . 60 Assist</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-20 text-1xl rounded" onclick="selectPlayer(this)"
+          >
+            SELECT 
+          </button>
+        </div>
+
+        <div class="border" style="height: 330px">
+          <img
+            class="mb-4 h-2/4 w-full"
+            src="images/Marco Verratti.jpg"
+            alt=""
+          />
+          <h2 class="text-white text-2xl text-center font-semibold mb-2">
+            Marco Verratti
+          </h2>
+          <p class="text-slate-500 text-center mb-4">13 Goals . 45 Assist</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-20 text-1xl rounded" onclick="selectPlayer(this)"
+          >
+            SELECT
+          </button>
+        </div>
+
+        <div class="border" style="height: 330px">
+          <img
+            class="mb-4 h-2/4 w-full"
+            src="images/Sergio  Ramos.jpg"
+            alt=""
+          />
+          <h2 class="text-white text-2xl text-center font-semibold mb-2">
+            Sergio Ramos
+          </h2>
+          <p class="text-slate-500 text-center mb-4">3 Goals . 22 Assist</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-20 text-1xl rounded" onclick="selectPlayer(this)"
+          >
+            SELECT
+          </button>
+        </div>
+
+        <div class=" block bg-black" style="height: 440px">
+
+          <h1 class="text-white text-center text-2xl mt-3 mb-4">Budget</h1>
+           <div class="flex justify-center items-center mb-4">
+            <p class="text-zinc-400 mr-4 ">Per Player</p>
+            <input id="per-player-cost" class="inline  w-6/12 py-2 px-4 bg-black text-white border" type="text">
+           </div>
+           <button id="calculate-btn"
+           class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-20 text-1xl mb-4 rounded"
+          >
+           Calculate
+         </button>
+         <div class="flex justify-between items-center mx-4 mb-6">
+          <p class="text-zinc-400  mr-8">Player Expenses</p>
+          <p class="text-orange-500 ">$<span id="total-player-expenses">0000</span></p>
+         </div>
+         <div class="flex justify-center items-center mb-4">
+          <p class="text-zinc-400 mr-6 ">Manager</p>
+          <input id="manager-cost" class="inline w-6/12 py-2 px-4 bg-black text-white border" type="text">
+         </div>
+         <div class="flex justify-center items-center mb-4">
+          <p class="text-zinc-400 mr-10 ">Coach</p>
+          <input id="coach-cost" class="inline w-6/12 py-2 px-4 bg-black text-white border ml-1" type="text">
+         </div>
+          <button id="total-calculate-btn"
+            class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-14 text-1xl mb-4 rounded"
+            >
+           Calculate Total
+          </button>
+          <div class="flex justify-between items-center mb-4 px-4">
+            <p class="text-zinc-400  mr-8">Total</p>
+            <p class="text-orange-500 ">$<span id="final-total">0000</span></p>
+           </div>
+          
+
+         
+        </div> 
+           
+      </div>
+      
+      <!-- row-2 ends here -->
+
+
+
+      <!-- row-3 start here -->
+      <div class="grid grid-cols-4 gap-4 w-10/12 mx-auto mb-12 -mt-36 mb-36">
+        <div class="border" style="height: 330px">
+          <img class="mb-4 h-2/4 w-full" src="images/Nuno Mendes.jpg" alt="" />
+          <h2 class="text-white text-2xl text-center font-semibold mb-2">
+            Nuno Mendes
+          </h2>
+          <p class="text-slate-500 text-center mb-4">5 Goals . 26 Assist</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-20 text-1xl rounded" onclick="selectPlayer(this)"
+          >
+            SELECT
+          </button>
+        </div>
+
+        <div class="border" style="height: 330px">
+          <img
+            class="mb-4 h-2/4 w-full"
+            src="images/leandro Paredes.jpg"
+            alt=""
+          />
+          <h2 class="text-white text-2xl text-center font-semibold mb-2">
+            Leandro Paredes
+          </h2>
+          <p class="text-slate-500 text-center mb-4"> 2 Goals . 15 Assist</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-20 text-1xl rounded" onclick="selectPlayer(this)"
+          >
+            SELECT
+          </button>
+        </div>
+
+        <div class="border" style="height: 330px">
+          <img
+            class="mb-4 h-2/4 w-full"
+            src="images/Marquinhos.jpg"
+            alt=""
+          />
+          <h2 class="text-white text-2xl text-center font-semibold mb-2">
+           Marquinhos
+          </h2>
+          <p class="text-slate-500 text-center mb-4">9 Goals . 17 Assist</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 block mx-auto text-white py-1.5 px-20 text-1xl rounded" onclick="selectPlayer(this)"
+          >
+            SELECT
+          </button>
+        </div>
+
+      <!-- row-3 end here -->
+      
+    </main>
+    <!-- main section ends here -->
+
+
+    <hr>
+
+    <footer>
+      <p id="para" class="text-center text-white mt-10 mb-10">Copyright @ 2023 All Rights Reserved</p>
+    </footer> 
+   
+    <script src="app.js"></script>
+  </body>
+</html>

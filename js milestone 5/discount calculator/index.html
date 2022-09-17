@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    div{
+        height: 200px;
+    }
+</style>
+
+<body>
+    <section class="mt-12">
+
+        <div class="grid grid-cols-2 w-9/12 p-6 mx-auto bg-red-100 h-72">
+            <div class="bg-gray-50 h-full p-6">
+                <h1 class="text-black font-bold  mb-12">Redeem Promo</h1>
+                <input id="input-field" class="bg-slate-200 px-8 py-1" type="text" placeholder="Enter Promo Code">
+                <button id="btn-apply" class="bg-red-600 rounded-r -ml-1.5 text-white px-12 font-bold py-1 mb-12"  disabled>Apply</button>
+                <button id="btn-pay" class="bg-purple-600 rounded text-white px-14 font-bold py-1 ">Pay Now</button>
+                
+                
+            </div>
+            <div class="bg-slate-200 h-full p-6">
+                <h1 class="text-black font-bold  text-center text-3xl ">Price:</h1>
+                <h1 class="text-red-600 font-bold  text-center text-3xl mb-8">$<span id="price">1250</span></h1>
+                
+                <h1 class="text-black font-bold  text-center text-2xl ">Discount You get:</h1>
+                <h1 class="text-red-600 font-bold  text-center text-3xl ">30%</h1>
+                
+            </div>
+            
+            
+            
+        </div>
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>

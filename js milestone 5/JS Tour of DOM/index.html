@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Tour of DOM</title>
+</head>
+<body>
+
+    <header>
+        <h1 class="bg-yellow" id="title">Welcome to my dom</h1>
+    </header>
+    <main id="main-content">
+        <h1>
+            My awesome dom de baba 
+        </h1>
+        <section class="large-text" id="song-para">
+
+            <ul class="song">
+                <li>jalali set </li>
+                <li>safayat</li>
+                <li>bonobash</li>
+            </ul>
+        </section>
+        <section class="second-section large-text">
+
+            <ul class="place" id="place-list">
+                <li>sonderbon </li>
+                <li>banderbon</li>
+                <li>salbon</li>
+            </ul>
+        </section>
+       
+        <section class="large-text">
+
+            <ul id="fruitslist">
+                <li>apple</li>
+                <li>banaba</li>
+                <li>orange</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/dom.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/styleofjs.js"></script>
+
+    <script>
+        const places = document.getElementsByClassName('place');
+        for(const place of places){
+        console.log(place.innerText);
+        }  
+
+        const fruits = document.getElementById('fruitslist').style.color='red';
+        console.log(fruits.innerText);
+    
+    </script>
+</body>
+</html>

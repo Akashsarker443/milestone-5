@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baaper Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+</head>
+<body>
+
+    <header class="w-6/12 mx-auto mt-4">
+        <h1 id="msg" class="text-5xl mb-3">Will you marry me?</h1>
+        <button id="btn-yes" class="bg-purple-600 hover:bg-orange-500 py-2 rounded px-4 text-white font-semibold">Yes</button>
+        <button id="btn-no" class="bg-red-600 hover:bg-orange-500 py-2 rounded px-4 text-white font-semibold">No</button>
+    </header>
+   
+    <script>
+       document.getElementById('btn-yes').addEventListener('click', function(){
+               const text = document.getElementById('msg');
+               text.innerText = 'yes, I love you 💌';
+       })
+       document.getElementById('btn-no').addEventListener('click', function(){
+               const text = document.getElementById('msg');
+               text.innerText = 'no, I have a boyfriend 💔';
+       })
+
+    </script>
+</body>
+</html>
